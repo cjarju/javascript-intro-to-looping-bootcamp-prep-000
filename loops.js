@@ -1,26 +1,25 @@
 function forLoop(arr) {
  for (var i = 0; i < 25; i++) {
-   if (i === 0) {
+   if (i === 1) {
      arr.push("I am 1 strange loop.")
    }
    else {
-     arr.push(`I am ${i+1} strange loops.`)
+     arr.push(`I am ${i} strange loops.`)
    }
  }
  return arr
 }
 
 function whileLoop(num) {
-  var countdown = num
-  while (countdown > 0) {
-    console.log(--countdown)
+  while (num > 0) {
+    console.log(--num)
   }
   return 'done'
 }
 
 function doWhileLoop(arr) {
   do {
-    arr.pop()
+    arr = arr.slice(1)
   } while (arr.length > 0 && maybeTrue())
   return arr
 }
